@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Place"
+    android:paddingTop="40dp"
+    android:background="@color/cardview_dark_background">
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="307dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="-6dp"
+        android:ems="10"
+        android:textColor="#ffff"
+        android:hint="주소를 입력하세요">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="검색" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:textColor="#ffff"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="-1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

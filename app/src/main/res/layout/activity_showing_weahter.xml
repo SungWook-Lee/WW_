@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/showingWeather"
+    tools:context=".ShowingWeather">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:paddingTop="20dp"
+        android:id="@+id/appbar"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation= "0dp" >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingTop="30dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:paddingBottom="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/updateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:paddingTop="16dp"
+                android:id="@+id/curLoc"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/currentWeatherPic"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_gravity="center"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/currentWeather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="30dp" />
+
+
+            <TextView
+                android:id="@+id/dailyMaxMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:paddingBottom="100dp"/>
+
+
+            <TextView
+               android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffff"
+                android:text="시간별 날씨" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*"
+                        android:background="@drawable/border">
+
+                        <TableRow >
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff" />
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTime8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                            <TextView
+                                android:paddingTop="16dp"
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:paddingRight="16dp"
+                                android:id="@+id/shortWeatherTime9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus4"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus5"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus6"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus7"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherStatus8"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+                            <ImageView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:paddingRight="16dp"
+                                android:id="@+id/shortWeatherStatus9"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"/>
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+                            <TextView
+                                android:paddingLeft="16dp"
+                                android:paddingBottom="16dp"
+                                android:id="@+id/shortWeatherTemp9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#ffffff"/>
+
+                        </TableRow>
+                    </TableLayout>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:paddingTop="100dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffff"
+                android:text="주간 날씨" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:background="@drawable/border">
+
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky1am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky1pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky2am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky2pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky3am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky3pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky4am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky4pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky5am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky5pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky6am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky6pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+
+                <TableRow
+                    android:paddingTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/day7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"/>
+
+                    <ImageView
+                        android:id="@+id/longWeatherSky7am"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+                    <ImageView
+                        android:id="@+id/longWeatherSky7pm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/longWeatherTemp7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff"/>
+                </TableRow>
+
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

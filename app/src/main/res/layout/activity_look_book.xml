@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    -<LinearLayout
+    android:paddingTop="40dp"
+    android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="horizontal" android:id="@+id/ll">
+
+    <TextView android:layout_height="50dp" android:layout_width="0dip" android:id="@+id/tab_first" android:text="STREET" android:background="@drawable/tab_bg_selec" android:textColor="@drawable/tab_color_sele" android:gravity="center" android:layout_weight="1"/>
+
+    <TextView android:layout_height="50dp" android:layout_width="0dip" android:id="@+id/tab_second" android:text="CAMPUS" android:background="@drawable/tab_bg_selec" android:textColor="@drawable/tab_color_sele" android:gravity="center" android:layout_weight="1"/>
+
+    <TextView android:layout_height="50dp" android:layout_width="0dip" android:id="@+id/tab_third" android:text="CASUAL" android:background="@drawable/tab_bg_selec" android:textColor="@drawable/tab_color_sele" android:gravity="center" android:layout_weight="1"/>
+
+    <TextView android:layout_height="50dp" android:layout_width="0dip" android:id="@+id/tab_fourth" android:text="OFFICE" android:background="@drawable/tab_bg_selec" android:textColor="@drawable/tab_color_sele" android:gravity="center" android:layout_weight="1"/>
+
+
+</LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/vp" android:layout_below="@+id/ll"> </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

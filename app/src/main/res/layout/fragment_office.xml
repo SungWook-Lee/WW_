@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    >
+
+    <ImageView
+        android:paddingTop="50dp"
+        android:id="@+id/sun"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/tmax"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_toRightOf="@id/sun"
+        android:text="최고 기온: 23" />
+
+
+
+    <HorizontalScrollView
+        android:id="@+id/imav1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sun"
+
+        android:layout_marginTop="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_margin="10dp"
+
+                android:id="@+id/im1"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/os1" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_margin="10dp"
+                android:id="@+id/im2"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/os2" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_margin="10dp"
+                android:id="@+id/im3"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/os3" />
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:layout_margin="10dp"
+                android:id="@+id/im4"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/os4" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/night"
+        android:layout_below="@+id/imav1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/tmin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp"
+        android:layout_below="@id/imav1"
+        android:layout_toRightOf="@id/night"
+        android:text="최저 기온: 23" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/imav2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/night"
+
+        android:layout_marginTop="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp">
+
+        <LinearLayout
+            android:id="@+id/llll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/im5"
+                android:layout_margin="10dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/ss1" />
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/im6"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ss2" />
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/im7"
+                android:layout_margin="10dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/ss3" />
+
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/im8"
+                android:layout_margin="10dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:background="@drawable/ss4" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageButton
+        android:id="@+id/elasticimageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/refresh" />
+
+
+
+
+
+</RelativeLayout>
